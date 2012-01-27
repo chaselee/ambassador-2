@@ -13,7 +13,7 @@ ambassador = Ambassador.new(username, api_key, response_type)
 
 #Compose your request
 params = {
-  :campaign_uid => 12345, #required, your campaign's ID
+  :campaign_uid => 87, #required, your campaign's ID
   :email => 'joe@gmail.com', #required, your customer's email address
   :short_code => 'aE', #option, referrer's "mbsy" shortcode
   :revenue => 0, #option, revenue amount of the event
