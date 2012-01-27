@@ -21,7 +21,7 @@ class Ambassador
   # :email_new_ambassador
   # :deactivate_new_ambassador
   def record_event(params = {})
-    self.class.post('/event/record', params)
+    self.class.post('/event/record', :query => params)
   end
   
   # Retrieve info for a single ambassador.
@@ -33,7 +33,7 @@ class Ambassador
   # :sandbox
   # :deactivate_new_ambassador
   def ambassador(params = {})
-    self.class.post('/ambassador/get', params)
+    self.class.post('/ambassador/get', :query => params)
   end
   
   # Retrieves a list of up to 100 ambassadors, optionally filtered by the parameters below.
@@ -42,7 +42,7 @@ class Ambassador
   # :min_points
   # :min_referrals
   def ambassadors(params = {})
-    self.class.post('/ambassador/all', params)
+    self.class.post('/ambassador/all', :query => params)
   end
   
   # Deducts from the running commission balance for one of your customers.
@@ -54,7 +54,7 @@ class Ambassador
   # :sandbox
   # :deactivate_new_ambassador
   def deduct_balance(params = {})
-    self.class.post('/balance/deduct', params)
+    self.class.post('/balance/deduct', :query => params)
   end
   
   # Adds to the running commission balance of an ambassador.
@@ -66,14 +66,14 @@ class Ambassador
   # :sandbox
   # :deactivate_new_ambassador
   def add_balance(params = {})
-    self.class.post('/balance/add', params)
+    self.class.post('/balance/add', :query => params)
   end
   
   # Retrieves the referring ambassador and campaign information tied to an “mbsy” shortcode.
   # :short_code        [required]
   # :sandbox
   def add_balance(params = {})
-    self.class.post('/shortcode/get', params)
+    self.class.post('/shortcode/get', :query => params)
   end
   
   # Retrieves an AddThis snippet for all active campaigns for one of your customers.
@@ -86,7 +86,7 @@ class Ambassador
   # :sandbox
   # :deactivate_new_ambassador
   def addthis(params = {})
-    self.class.post('/social/addthis', params)
+    self.class.post('/social/addthis', :query => params)
   end
   
   # Retrieves an AddThis snippet for all active campaigns for one of your customers.
